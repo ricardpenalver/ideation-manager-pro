@@ -45,8 +45,8 @@ cd ..
 
 3. Ejecuta la aplicación:
 ```bash
-# Opción 1: Script automático
-./start.sh
+# Opción 1: Script automático (RECOMENDADO)
+./start-app.sh
 
 # Opción 2: Manual
 npm run dev
@@ -67,18 +67,27 @@ npm run dev
 
 ## 🚀 Despliegue
 
-### Vercel
-El proyecto está configurado para desplegarse automáticamente en Vercel:
+### Vercel (Recomendado)
 
-1. Conecta tu repositorio de GitHub a Vercel
-2. Configura las variables de entorno si es necesario
-3. El despliegue se realizará automáticamente en cada push a `main`
+#### Opción 1: CLI (Rápido)
+```bash
+# Instalar Vercel CLI si no la tienes
+npm install -g vercel
 
-### Variables de Entorno
-```env
-NODE_ENV=production
-PORT=5000
+# Hacer deployment
+./deploy-vercel.sh
 ```
+
+#### Opción 2: GitHub (Automático)
+1. Sube tu código a GitHub
+2. Conecta tu repositorio a [Vercel](https://vercel.com)
+3. El despliegue se realizará automáticamente
+
+### Características del deployment
+- ✅ **Backend serverless**: API completamente funcional
+- ✅ **Frontend estático**: Carga rápida y optimizada
+- ✅ **HTTPS automático**: Seguridad por defecto
+- ✅ **CDN global**: Disponible mundialmente
 
 ## 📁 Estructura del Proyecto
 
@@ -91,9 +100,11 @@ idea-manager/
 │   └── workflows/
 │       └── ci.yml         # Pipeline CI/CD
 ├── index.html             # Página principal
-├── app.js                 # Lógica del frontend
+├── app.js                 # Frontend con localStorage
+├── app-api.js            # Frontend con API
 ├── styles.css             # Estilos CSS
-├── start.sh              # Script de inicio
+├── start-app.sh          # Script de inicio (desarrollo)
+├── deploy-vercel.sh      # Script de deployment
 ├── package.json           # Configuración del proyecto
 └── README.md             # Documentación
 ```

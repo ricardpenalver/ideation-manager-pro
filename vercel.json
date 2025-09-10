@@ -4,10 +4,6 @@
     {
       "src": "backend/server.js",
       "use": "@vercel/node"
-    },
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -20,7 +16,9 @@
       "dest": "/$1"
     }
   ],
-  "env": {
-    "NODE_ENV": "production"
+  "functions": {
+    "backend/server.js": {
+      "maxDuration": 10
+    }
   }
 }
