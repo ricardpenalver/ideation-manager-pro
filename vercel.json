@@ -1,4 +1,6 @@
 {
+  "buildCommand": "echo 'Build completed'",
+  "outputDirectory": ".",
   "functions": {
     "api/ideas.js": {
       "maxDuration": 10
