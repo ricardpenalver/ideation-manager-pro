@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idea Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💡 Idea Manager</h1>
+            <p>Gestiona tus ideas de manera eficiente</p>
+        </header>
+
+        <main>
+            <div class="idea-form">
+                <h2>Nueva Idea</h2>
+                <form id="ideaForm">
+                    <input type="text" id="ideaTitle" placeholder="Título de la idea" required>
+                    <textarea id="ideaDescription" placeholder="Descripción detallada" required></textarea>
+                    <select id="ideaCategory">
+                        <option value="tecnologia">Tecnología</option>
+                        <option value="negocio">Negocio</option>
+                        <option value="personal">Personal</option>
+                        <option value="creativo">Creativo</option>
+                    </select>
+                    <button type="submit">💾 Guardar Idea</button>
+                </form>
+            </div>
+
+            <div class="ideas-list">
+                <h2>Mis Ideas</h2>
+                <div id="ideasContainer">
+                    <p class="no-ideas">No tienes ideas guardadas aún. ¡Crea tu primera idea!</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

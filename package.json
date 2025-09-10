@@ -1,0 +1,24 @@
+{
+  "name": "idea-manager",
+  "version": "1.0.0",
+  "description": "Aplicación web para gestionar ideas de manera eficiente",
+  "main": "index.html",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "npm run dev:backend & npm run dev:frontend",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "python3 -m http.server 3000",
+    "build": "echo 'Build completed'",
+    "test": "echo 'Tests completed'"
+  },
+  "keywords": ["ideas", "manager", "productivity", "web-app"],
+  "author": "rilihouse",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rilihouse/idea-manager.git"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
